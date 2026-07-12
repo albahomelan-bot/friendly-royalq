@@ -1,12 +1,21 @@
 <!doctype html>
-<html lang="ru">
+<html lang="uk" data-lang="uk">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Авто-торговля | Гайд + сообщество</title>
-  <meta name="description" content="Как запустить торгового робота с телефона за 10 минут. Без передачи средств и обещаний дохода. Пошаговая инструкция и сообщество в Telegram." />
-  <meta property="og:title" content="Авто-торговля | Гайд + сообщество" />
-  <meta property="og:description" content="Пошаговая инструкция, безопасные настройки, сообщество в Telegram. Начни с малого, без обещаний доходности." />
+  
+  <title class="lang-uk">Авто-торгівля | Гайд + спільнота</title>
+  <title class="lang-en">Auto-Trading | Guide + Community</title>
+  
+  <meta name="description" class="lang-uk" content="Як запустити торгового робота з телефону за 10 хвилин. Без передачі коштів та обіцянок доходу. Покрокова інструкція та спільнота в Telegram." />
+  <meta name="description" class="lang-en" content="How to launch a trading robot from your phone in 10 minutes. Without transferring funds or income promises. Step-by-step guide and Telegram community." />
+  
+  <meta property="og:title" class="lang-uk" content="Авто-торгівля | Гайд + спільнота" />
+  <meta property="og:title" class="lang-en" content="Auto-Trading | Guide + Community" />
+  
+  <meta property="og:description" class="lang-uk" content="Покрокова інструкція, безпечні налаштування, спільнота в Telegram. Почни з малого, без обіцянок доходності." />
+  <meta property="og:description" class="lang-en" content="Step-by-step guide, safe settings, Telegram community. Start small, without income promises." />
+  
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/robot.jpg" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -15,11 +24,16 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    [data-lang="en"] .lang-uk { display: none !important; }
+    [data-lang="uk"] .lang-en { display: none !important; }
+  </style>
 </head>
 <body class="bg-slate-900 text-white font-sans">
 
@@ -29,89 +43,199 @@
       <img src="assets/robot_logo.jpg" alt="Logo" class="h-8 w-8 rounded" />
       AutoTrade Guide
     </div>
-    <a href="https://t.me/albaRoyalQRobot" class="px-4 py-2 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:brightness-110">Перейти в Telegram</a>
+    
+    <div class="flex items-center gap-4">
+      <!-- Language Switcher -->
+      <button id="lang-toggle" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-sm font-semibold text-cyan-400 transition-colors flex items-center gap-1.5" aria-label="Change Language">
+        <i class="fa-solid fa-globe"></i> <span id="lang-current">UK</span>
+      </button>
+      
+      <a href="https://t.me/albaRoyalQRobot" class="px-4 py-2 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:brightness-110 transition-all">
+        <span class="lang-uk">Перейти в Telegram</span>
+        <span class="lang-en">Go to Telegram</span>
+      </a>
+    </div>
   </div>
 </header>
 
-<section class="py-20 px-4 text-center">
-  <div class="max-w-3xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Запусти торгового робота<br>всего за 10 минут</h1>
-    <p class="mt-5 text-slate-300 text-lg">Пошаговая инструкция, безопасные настройки, поддержка и старт от <strong>$120</strong>. Деньги всегда остаются на вашем аккаунте. Без финансовых обещаний.</p>
-    <div class="mt-8 flex justify-center gap-4 flex-wrap">
-      <a href="https://t.me/albaRoyalQRobot" class="bg-cyan-400 text-slate-900 px-6 py-3 rounded-lg font-semibold shadow hover:brightness-110">🚀 Получить инструкцию</a>
-      <a href="#how" class="px-6 py-3 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20">Как это работает</a>
-    </div>
-  </div>
-</section>
-
-<section id="how" class="py-16 bg-slate-800">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Как это работает</h2>
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="bg-slate-700 rounded-xl p-5 text-sm">
-        <strong>1. Создание аккаунта</strong><br>Регистрируйся на платформе и включай 2FA.
-      </div>
-      <div class="bg-slate-700 rounded-xl p-5 text-sm">
-        <strong>2. Генерация API-ключа</strong><br>Только чтение и торговля. Без вывода средств.
-      </div>
-      <div class="bg-slate-700 rounded-xl p-5 text-sm">
-        <strong>3. Подключение робота</strong><br>Используй готовые настройки под $120 и выше.
-      </div>
-      <div class="bg-slate-700 rounded-xl p-5 text-sm">
-        <strong>4. Контроль</strong><br>Ежедневный быстрый мониторинг + поддержка в Telegram.
+<main>
+  <!-- Hero Section -->
+  <section class="py-20 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        <span class="lang-uk">Запусти торгового робота<br>всього за 10 хвилин</span>
+        <span class="lang-en">Launch a Trading Robot<br>in Just 10 Minutes</span>
+      </h1>
+      
+      <p class="mt-5 text-slate-300 text-lg">
+        <span class="lang-uk">Покрокова інструкція, безпечні налаштування, підтримка та старт від <strong>$120</strong>. Кошти завжди залишаються на вашому акаунті. Без фінансових обіцянок.</span>
+        <span class="lang-en">Step-by-step guide, safe settings, support, and start from <strong>$120</strong>. Your funds always remain on your account. No financial promises.</span>
+      </p>
+      
+      <div class="mt-8 flex justify-center gap-4 flex-wrap">
+        <a href="https://t.me/albaRoyalQRobot" class="bg-cyan-400 text-slate-900 px-6 py-3 rounded-lg font-semibold shadow hover:brightness-110 transition-all">
+          <span class="lang-uk">🚀 Отримати інструкцію</span>
+          <span class="lang-en">🚀 Get the Guide</span>
+        </a>
+        <a href="#how" class="px-6 py-3 bg-white/10 border border-white/20 rounded-lg hover:bg-white/20 transition-all">
+          <span class="lang-uk">Як це працює</span>
+          <span class="lang-en">How it Works</span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-16">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Примеры интерфейса и отчётов</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <img src="assets/report_1.jpg" alt="Пример 1" class="rounded-xl w-full" />
-      <img src="assets/report_2.jpg" alt="Пример 2" class="rounded-xl w-full" />
-      <img src="assets/report_3.jpg" alt="Пример 3" class="rounded-xl w-full" />
-    </div>
-    <p class="text-xs text-slate-400 mt-4 text-center">* Примеры приведены в образовательных целях, не являются гарантией результата.</p>
-  </div>
-</section>
-
-<!-- FAQ Section -->
-<section id="faq" class="py-16 bg-slate-900 border-t border-white/10">
-  <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-10">Ответы на вопросы (FAQ)</h2>
-    <div class="space-y-6">
-      <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">🔒 Безопасно ли это? Где хранятся мои деньги?</h3>
-        <p class="text-slate-300 text-sm leading-relaxed">Ваши средства остаются на вашем личном аккаунте биржи (Binance, Bybit и др.). Робот подключается по API-ключам с правами исключительно на торговлю и чтение. Права на вывод средств отключены — робот физически не может забрать ваши деньги.</p>
-      </div>
-      <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">📉 Каковы реальные риски?</h3>
-        <p class="text-slate-300 text-sm leading-relaxed">Это спотовая торговля без кредитных плеч и ликвидаций. Робот закупает активы на падении и продает на росте. Главный риск — временная «просадка» (когда монеты куплены, но рынок упал). В этот момент средства заморожены в монетах до тех пор, пока рынок не развернется в плюс.</p>
-      </div>
-      <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">💰 Сколько нужно для старта?</h3>
-        <p class="text-slate-300 text-sm leading-relaxed">Рекомендуемый депозит на бирже — от $120. Лицензия на робота оплачивается отдельно согласно тарифам RoyalQ.</p>
-      </div>
-      <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-cyan-400 mb-2">⏱️ Нужно ли следить за ним каждый день?</h3>
-        <p class="text-slate-300 text-sm leading-relaxed">Нет. Робот работает полностью автономно по заложенной стратегии. Вам достаточно заходить в приложение на 2-3 минуты в день, чтобы зафиксировать прибыль или проверить баланс.</p>
+  <!-- How it works Section -->
+  <section id="how" class="py-16 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        <span class="lang-uk">Як це працює</span>
+        <span class="lang-en">How it Works</span>
+      </h2>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-slate-700 rounded-xl p-5 text-sm">
+          <span class="lang-uk"><strong>1. Створення акаунта</strong><br>Реєструйся на платформі та вмикай 2FA.</span>
+          <span class="lang-en"><strong>1. Account Creation</strong><br>Register on the platform and enable 2FA.</span>
+        </div>
+        <div class="bg-slate-700 rounded-xl p-5 text-sm">
+          <span class="lang-uk"><strong>2. Генерація API-ключа</strong><br>Тільки читання та торгівля. Без виведення коштів.</span>
+          <span class="lang-en"><strong>2. API Key Generation</strong><br>Read and trade permissions only. No withdrawals allowed.</span>
+        </div>
+        <div class="bg-slate-700 rounded-xl p-5 text-sm">
+          <span class="lang-uk"><strong>3. Підключення робота</strong><br>Використовуй готові налаштування від $120 і вище.</span>
+          <span class="lang-en"><strong>3. Connect the Robot</strong><br>Use pre-configured settings from $120 and up.</span>
+        </div>
+        <div class="bg-slate-700 rounded-xl p-5 text-sm">
+          <span class="lang-uk"><strong>4. Контроль</strong><br>Щоденний швидкий моніторинг + підтримка в Telegram.</span>
+          <span class="lang-en"><strong>4. Monitoring</strong><br>Quick daily monitoring + Telegram support.</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="py-16 bg-slate-800">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold">Готов начать?</h2>
-    <p class="mt-3 text-slate-300">Присоединяйся к сообществу и получи пошаговую инструкцию прямо сейчас.</p>
-    <a href="https://t.me/albaRoyalQRobot" class="mt-6 inline-block px-7 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:brightness-110">🚀 В Telegram</a>
-  </div>
-</section>
+  <!-- Gallery/Reports Section -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        <span class="lang-uk">Приклади інтерфейсу та звітів</span>
+        <span class="lang-en">Interface and Report Examples</span>
+      </h2>
+      
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="assets/report_1.jpg" alt="Report example 1" class="rounded-xl w-full" />
+        <img src="assets/report_2.jpg" alt="Report example 2" class="rounded-xl w-full" />
+        <img src="assets/report_3.jpg" alt="Report example 3" class="rounded-xl w-full" />
+      </div>
+      
+      <p class="text-xs text-slate-400 mt-4 text-center">
+        <span class="lang-uk">* Приклади наведені з освітньою метою та не є гарантією результату.</span>
+        <span class="lang-en">* Examples are for educational purposes and do not guarantee results.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-slate-900 border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">
+        <span class="lang-uk">Відповіді на запитання (FAQ)</span>
+        <span class="lang-en">Frequently Asked Questions (FAQ)</span>
+      </h2>
+      
+      <div class="space-y-6">
+        <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-cyan-400 mb-2">
+            <span class="lang-uk">🔒 Чи це безпечно? Де зберігаються мої гроші?</span>
+            <span class="lang-en">🔒 Is it safe? Where is my money stored?</span>
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-uk">Ваші кошти залишаються на вашому особистому акаунті біржі (Binance, Bybit тощо). Робот підключається через API-ключі виключно з правами на торгівлю та читання. Права на виведення коштів відсутні — робот фізично не може забрати ваші гроші.</span>
+            <span class="lang-en">Your funds remain on your personal exchange account (Binance, Bybit, etc.). The robot connects via API keys with read and trade permissions only. Withdrawal permissions are disabled — the robot physically cannot take your money.</span>
+          </p>
+        </div>
+        
+        <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-cyan-400 mb-2">
+            <span class="lang-uk">📉 Які реальні ризики?</span>
+            <span class="lang-en">📉 What are the actual risks?</span>
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-uk">Це спотова торгівля без кредитних плечей та ліквідацій. Робот закуповує активи на падінні та продає на зростанні. Головний ризик — тимчасова «просадка» (коли монети куплені, але ринок упав). У цей момент кошти заморожені в монетах доти, доки ринок знову не зросте.</span>
+            <span class="lang-en">This is spot trading without leverage or liquidations. The robot buys assets during dips and sells on rises. The main risk is a temporary floating drawdown (when coins are bought but the market falls). During this period, your funds are temporarily held in coins until the market recovers.</span>
+          </p>
+        </div>
+        
+        <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-cyan-400 mb-2">
+            <span class="lang-uk">💰 Скільки потрібно для старту?</span>
+            <span class="lang-en">💰 How much is needed to start?</span>
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-uk">Рекомендований депозит на біржі — від $120. Ліцензія на робота оплачується окремо відповідно до тарифів RoyalQ.</span>
+            <span class="lang-en">The recommended exchange deposit starts from $120. The robot license is paid separately according to RoyalQ rates.</span>
+          </p>
+        </div>
+        
+        <div class="bg-slate-800/60 border border-white/10 rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-cyan-400 mb-2">
+            <span class="lang-uk">⏱️ Чи потрібно стежити за ним щодня?</span>
+            <span class="lang-en">⏱️ Do I need to monitor it every day?</span>
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            <span class="lang-uk">Ні. Робот працює повністю автономно за закладеною стратегією. Вам достатньо заходити в додаток на 2-3 хвилини в день, щоб перевірити баланс або зафіксувати прибуток.</span>
+            <span class="lang-en">No. The robot works completely autonomously based on the configured strategy. You only need to check the app for 2-3 minutes a day to monitor your balance or check profits.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold">
+        <span class="lang-uk">Готовий почати?</span>
+        <span class="lang-en">Ready to Start?</span>
+      </h2>
+      <p class="mt-3 text-slate-300">
+        <span class="lang-uk">Приєднуйся до спільноти та отримай покрокову інструкцію просто зараз.</span>
+        <span class="lang-en">Join the community and get the step-by-step guide right now.</span>
+      </p>
+      <a href="https://t.me/albaRoyalQRobot" class="mt-6 inline-block px-7 py-3 bg-cyan-400 text-slate-900 font-semibold rounded-lg hover:brightness-110 transition-all">
+        <span class="lang-uk">🚀 У Telegram</span>
+        <span class="lang-en">🚀 Go to Telegram</span>
+      </a>
+    </div>
+  </section>
+</main>
 
 <footer class="py-10 border-t border-white/10 text-center text-sm text-slate-400">
-  © 2025 AutoTrade Guide — Образовательный проект. Не является индивидуальной инвестиционной рекомендацией.
+  <span class="lang-uk">© 2025 AutoTrade Guide — Освітній проєкт. Не є індивідуальною інвестиційною рекомендацією.</span>
+  <span class="lang-en">© 2025 AutoTrade Guide — Educational project. Not an individual investment recommendation.</span>
 </footer>
+
+<!-- JS Logic for Language Toggling -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const langToggle = document.getElementById('lang-toggle');
+  const langCurrent = document.getElementById('lang-current');
+  if (langToggle && langCurrent) {
+    const savedLang = localStorage.getItem('lang') || 'uk';
+    document.documentElement.setAttribute('data-lang', savedLang);
+    langCurrent.textContent = savedLang.toUpperCase();
+
+    langToggle.addEventListener('click', () => {
+      const currentLang = document.documentElement.getAttribute('data-lang');
+      const newLang = currentLang === 'en' ? 'uk' : 'en';
+      
+      document.documentElement.setAttribute('data-lang', newLang);
+      langCurrent.textContent = newLang.toUpperCase();
+      localStorage.setItem('lang', newLang);
+    });
+  }
+});
+</script>
 
 </body>
 </html>
